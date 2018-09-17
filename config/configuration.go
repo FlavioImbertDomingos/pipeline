@@ -136,6 +136,13 @@ func init() {
 	viper.SetDefault(OKEWaitAttemptsForNodepoolActive, 60)
 	viper.SetDefault(OKESleepSecondsForNodepoolActive, 30)
 
+	viper.SetDefault("ark.name", "ark")
+	viper.SetDefault("ark.namespace", "pipeline-infra")
+	viper.SetDefault("ark.chart", "stable/ark")
+	viper.SetDefault("ark.image", "waynz0r/ark")
+	viper.SetDefault("ark.imagetag", "schedule-labels-fix")
+	viper.SetDefault("ark.pullpolicy", "IfNotPresent")
+
 	ReleaseName := os.Getenv("KUBERNETES_RELEASE_NAME")
 	if ReleaseName == "" {
 		ReleaseName = "pipeline"

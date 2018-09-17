@@ -83,6 +83,7 @@ const (
 	RegisterDomainPostHook                 = "RegisterDomainPostHook"
 	LabelNodes                             = "LabelNodes"
 	InstallPVCOperator                     = "InstallPVCOperator"
+	RestoreFromBackup                      = "RestoreFromBackup"
 )
 
 // Provider name regexp

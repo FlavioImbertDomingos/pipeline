@@ -101,3 +101,11 @@ resourceDeleteSleepSeconds = 5
 [oke]
 waitAttemptsForNodepoolActive = 60
 sleepSecondsForNodepoolActive = 30
+
+[ark]
+name = "ark"
+namespace = "pipeline-infra"
+chart = "stable/ark"
+image = "waynz0r/ark"
+imagetag = "schedule-labels-fix"
+pullpolicy = "IfNotPresent"

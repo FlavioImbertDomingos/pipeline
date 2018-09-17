@@ -841,6 +841,21 @@
   version = "v0.11.0"
 
 [[projects]]
+  digest = "1:bbbd02a5915f8714e48b7091ebe72b8ead2eafe303b008398be6e26f477ef582"
+  name = "github.com/heptio/ark"
+  packages = [
+    "pkg/apis/ark/v1",
+    "pkg/cloudprovider",
+    "pkg/cmd/util/downloadrequest",
+    "pkg/generated/clientset/versioned",
+    "pkg/generated/clientset/versioned/scheme",
+    "pkg/generated/clientset/versioned/typed/ark/v1",
+  ]
+  pruneopts = "NUT"
+  revision = "659a852c8cd5b2094e7d8d5ae4ff6b700b24d74b"
+  version = "v0.9.3"
+
+[[projects]]
   branch = "master"
   digest = "1:b7f860847a1d71f925ba9385ed95f1ebc0abfeb418a78e219ab61f48fdfeffad"
   name = "github.com/howeyc/gopass"
@@ -1762,7 +1777,6 @@
   version = "v2.2.0"
 
 [[projects]]
-  branch = "release-1.10"
   digest = "1:6b4ae148679d49dda5e1f7026701662758701b6cbd144cc8db1769710a01c4d2"
   name = "k8s.io/api"
   packages = [
@@ -1798,7 +1812,8 @@
     "storage/v1beta1",
   ]
   pruneopts = "NUT"
-  revision = "c699ec51538f0cfd4afa8bfcfe1e0779cafbe666"
+  revision = "73d903622b7391f3312dcbac6483fed484e185f8"
+  version = "kubernetes-1.10.0"
 
 [[projects]]
   branch = "master"
@@ -1816,8 +1831,7 @@
   revision = "9beab23b266308fcd25e38a73285f95a88633da0"
 
 [[projects]]
-  branch = "release-1.10"
-  digest = "1:8151e24d1644dc50f2f23d24b6d13fd94c62cf08b6508397674b07682dd9a9b6"
+  digest = "1:31a49d8a5dce8d0ddf03dfec7ccada64bf6f5c87ecec8e01e8425b35427c467c"
   name = "k8s.io/apimachinery"
   packages = [
     "pkg/api/equality",
@@ -1877,7 +1891,8 @@
     "third_party/forked/golang/reflect",
   ]
   pruneopts = "NUT"
-  revision = "54101a56dda9a0962bc48751c058eb4c546dcbb9"
+  revision = "302974c03f7e50f16561ba237db776ab93594ef6"
+  version = "kubernetes-1.10.0"
 
 [[projects]]
   branch = "master"
@@ -2339,6 +2354,10 @@
     "github.com/goph/emperror/errorlogrus",
     "github.com/gorilla/sessions",
     "github.com/hashicorp/vault/api",
+    "github.com/heptio/ark/pkg/apis/ark/v1",
+    "github.com/heptio/ark/pkg/cloudprovider",
+    "github.com/heptio/ark/pkg/cmd/util/downloadrequest",
+    "github.com/heptio/ark/pkg/generated/clientset/versioned",
     "github.com/jinzhu/copier",
     "github.com/jinzhu/gorm",
     "github.com/jinzhu/gorm/dialects/mysql",
@@ -2400,6 +2419,7 @@
     "k8s.io/apimachinery/pkg/api/resource",
     "k8s.io/apimachinery/pkg/apis/meta/v1",
     "k8s.io/apimachinery/pkg/fields",
+    "k8s.io/apimachinery/pkg/labels",
     "k8s.io/apimachinery/pkg/types",
     "k8s.io/apimachinery/pkg/util/intstr",
     "k8s.io/apimachinery/pkg/util/net",

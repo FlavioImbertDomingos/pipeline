@@ -220,7 +220,7 @@ func UpgradeDeployment(releaseName, chartName, chartVersion string, chartPackage
 }
 
 //CreateDeployment creates a Helm deployment in chosen namespace
-func CreateDeployment(chartName, chartVersion string, chartPackage []byte, namespace string, releaseName string, valueOverrides []byte, kubeConfig []byte, env helm_env.EnvSettings) (*rls.InstallReleaseResponse, error) {
+func CreateDeployment(chartName, chartVersion string, chartPackage []byte, namespace string, releaseName string, valueOverrides []byte, kubeConfig []byte, env helm_env.EnvSettings, timeout int64) (*rls.InstallReleaseResponse, error) {
 
 	chartRequested, err := getRequestedChart(releaseName, chartName, chartVersion, chartPackage, env)
 	if err != nil {
@@ -246,7 +246,7 @@ func CreateDeployment(chartName, chartVersion string, chartPackage []byte, names
 		helm.InstallDryRun(false),
 		helm.InstallReuseName(true),
 		helm.InstallDisableHooks(false),
-		helm.InstallTimeout(30),
+		helm.InstallTimeout(timeout),
 		helm.InstallWait(false))
 	if err != nil {
 		return nil, fmt.Errorf("Error deploying chart: %v", err)

@@ -83,7 +83,9 @@ func CreateDeployment(c *gin.Context) {
 		parsedRequest.deploymentReleaseName,
 		parsedRequest.values,
 		parsedRequest.kubeConfig,
-		helm.GenerateHelmRepoEnv(parsedRequest.organizationName))
+		helm.GenerateHelmRepoEnv(parsedRequest.organizationName),
+		30,
+	)
 	if err != nil {
 		//TODO distinguish error codes
 		log.Errorf("Error during create deployment. %s", err.Error())
